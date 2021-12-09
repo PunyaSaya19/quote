@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&family=Poppins:wght@300;400;500;600;800&display=swap');
+
+:root {
+  /* color */
+  --first-color: #3e6553;
+  --second-color: #e9f2ed;
+  --third-color : #36594a;
+  
+  /* text color */
+  --text-color-first : #252826;
+  --text-color-second : #565d59;
+  --text-color-third : #88918d;
+  
+  /* font size */
+  --big-font-size: 2rem;
+  --h1-font-size: 1.75rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .7rem;
+  
+}
+
+/* root mobile */
+@media (max-width : 768px) {
+  :root {
+    /* font size */
+    --big-font-size: 1.85rem;
+    --h1-font-size: 2.1rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.15rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .7rem;
+  }
+}
+
+*{
+  font-family: "Poppins", "Nunito", Sans-Serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  background: var(--second-color);
+  min-height: 3000px;
+}
+
+a#button_top {
+  position: fixed;
+  z-index: 99;
+  bottom: 0;
+  background: #fff;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  background: var(--first-color);
+  font-weight: 500;
+  font-size: var(--small-font-size);
+  transition: .3s ;
+  opacity: .3;
+  color: #fff;
+  text-decoration: none;
+}
+#button_top.active {
+  bottom: 10px;
+  transform: translate(-50%, 0);
+  opacity: .95;
+}
+#button_top:hover {
+  background: var(--third-color);
+}
+
+#button_add {
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  background: var(--first-color);
+  color: #fff;
+  font-size: var(--h3-font-size);
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  z-index: 99;
+}
+#button_add i {
+  margin: 0!important;
+  padding: 0!important;
+}
+#button_add:hover {
+  background: var(--third-color);
+}
+
+/* navbar */
+#my_nav {
+  background: var(--first-color);
+}
+#my_nav h2.nav_heading {
+  color: #fff;
+  font-size: var(--big-font-size);
+  font-weight: 600;
+}
+
+#content {
+  margin-top: 5rem;
+}
+#content .quote_box {
+  background: #fff;
+  font-weight: 400;
+  text-align: center;
+}
+#content .quote_box q.quote_content {
+  color: var(--text-color-first);
+  font-size: var(--h3-font-size);
+}
+#content .quote_box .quote_date {
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-second);
+  font-style: italic;
+}
+
+
+/* mobile version */
+@media (max-width : 768px) {
+  #quote_container {
+    
+  }
+}

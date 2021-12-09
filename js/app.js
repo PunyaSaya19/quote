@@ -5,6 +5,7 @@ const cekQuote = lclstrg.getItem("quotes");
 const cekPlace = lclstrg.getItem("place");
 const quoteContainer= document.querySelector("#quote_container");
 const quoteInput = document.querySelector("#quote_input");
+
 // actions
 window.onscroll = () => {
   if (window.pageYOffset > 10) {
@@ -90,12 +91,12 @@ function addQuote() {
   createNewQuote(quoteInput.value);
   showAllQuote()
   hideModal();
-  //showSuccessMsg();
+  setTimeout(showSuccessMsg, 300);
 }
 function createNewQuote(dt) {
   const allQuote = JSON.parse(lclstrg.getItem("quotes"));
   const newData = {
-    quote : dt,
+    quote : filterQuote(dt),
     created_at : getDateNow()
   }
   allQuote.push(newData);
@@ -107,4 +108,13 @@ function showSuccessMsg() {
 function hideModal() {
   $('#modalAdd').modal('hide');
   quoteInput.value = ""; 
+}
+
+function filterQuote(qt) {
+  let rslt = "";
+  rslt = qt.split("[").join("<b>");
+  rslt = rslt.split("]").join("</b>");
+  rslt = rslt.split("{").join("<i>");
+  rslt = rslt.split("}").join("</i>");
+  return rslt;
 }

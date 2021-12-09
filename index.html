@@ -46,7 +46,7 @@
   </section>
   
   
-  <div class="modal fade" id="modalAdd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+  <div class="modal fade" id="modalAdd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
@@ -58,10 +58,23 @@
           </button>
         </div>
         <div class="modal-body">
-          <textarea class="form-control mb-2" required id="quote_input" rows="8" cols="40"></textarea>
+          <textarea class="form-control mb-2" required id="quote_input" rows="3" cols="40" autofocus></textarea>
+          <div class="input_info">
+            <p class="m-0">
+              use <mark>[</mark>..<mark>]</mark> to make text <b>bold</b> and use <mark>{</mark>..<mark>}</mark> to make text <i>italic</i>.
+            </p>
+            <p class="m-0">
+              Example :
+            </p>
+            <p class="m-0">
+              [hai] = <b>hai</b>
+            </p>
+            <p class="m-0">
+              {hello} = <i>hello</i>
+            </p>
+          </div>
           <div class="btn_action d-flex flex-row-reverse">
           <button onclick="addQuote()" type="button" class="btn btn-primary">Save</button>
-          <button type="button" class="btn btn-secondary mr-2" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>

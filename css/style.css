@@ -43,9 +43,8 @@
 }
 body {
   background: var(--second-color);
-  min-height: 3000px;
+  min-height: 100vh;
 }
-
 a#button_top {
   position: fixed;
   z-index: 99;
@@ -88,9 +87,13 @@ a#button_top {
 #button_add i {
   margin: 0!important;
   padding: 0!important;
+  transition: .3s;
 }
 #button_add:hover {
   background: var(--third-color);
+}
+#button_add:hover i{
+  transform: rotate(45deg);
 }
 
 /* navbar */
@@ -119,6 +122,10 @@ a#button_top {
   font-size: var(--smaller-font-size);
   color: var(--text-color-second);
   font-style: italic;
+}
+.input_info p {
+  color : var(--text-color-third);
+  font-size: var(--small-font-size);
 }
 
 
